@@ -1,5 +1,15 @@
+* {
+  /* prevents an automatic margin causing white space */
+  margin: 0px;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 #header-background{
-  background-image: url("C:\Users\kreddy\Salesforce\Projects\GroupProject\images\HeaderBackground.jpg");
+  background-image: url(" ");
   width:100%;
   height:200px;
 }
@@ -36,22 +46,10 @@ section input{
 .contactInformation{
   margin: 10px;
 }
-* {
-  /* prevents an automatic margin causing white space */
-  margin: 0px;
-}
-
-
-*{
-  margin: 0px;
-  padding: 0px;
-}
-
 body{
-  /* background-image: linear-gradient(to right,rgb(25, 203, 188), blue); */
+ 
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 30px;  	
- background-image:url("images/OIP.png");
+  margin: 30px;  
  background-size: cover;
  background-color:rgb(145, 194, 198);
 }

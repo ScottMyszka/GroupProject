@@ -8,26 +8,26 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/validate.js"></script>
   </script>
-  <title>Ticket Booking</title> 
+  <title>Spaceship Booking</title> 
 </head>
 
 <body>
   <header id="header-background">
 
     <!-- Tab links -->
-    <h1>TCPS Ticket Booking System</h1>
+    <h1>Spaceship Ticket Booking System</h1>
     <p>Your once in a lifetime adventure starts now.....</p>
     <nav>
       <a href="home.html"><strong>Home</strong></a>
       <a href="bookings.html"><strong>Bookings</strong></a>
-      <a href="cruisedeals.html"><strong>Cruise Deals</strong></a>
+      <a href="spaceshipdeals.html"><strong>Spaceship Deals</strong></a>
       <a href="contactus.html"><strong>Contact Us</strong></a>  
     </nav>
   </header>
 
   <main>
     <form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post">
-      
+
        <!--  Radio buttons for travel information  one way or round trip-->
        <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
        <label for="oneway">One Way</label>
@@ -39,31 +39,31 @@
         <label for="from">From</label>
         <input type="text" id="from" name="arrivalCity" list="arrivalCitylist">
         <datalist id="arrivalCitylist">
-          <option value="Malasia">
-          <option value="India">
-          <option value="America">
-          <option value="Sydney">
-          <option value="Paris">
-          <option value="Singapore">
+          <option value="Mercury">
+          <option value="Venus">
+          <option value="Mars">
+          <option value="Jupiter">
+          <option value="Saturn">
+          <option value="Uranus">           
         </datalist>
 
         <label for="to">To</label>
         <input type="text" id="to" name="destinationCity" list="destinationCitylist">
         <datalist id="destinationCitylist">
-          <option value="Malasia">
-          <option value="India">
-          <option value="America">
-          <option value="Sydney">
-          <option value="Paris">
-          <option value="Singapore">
+          <option value="Mercury">
+            <option value="Venus">
+            <option value="Mars">
+            <option value="Jupiter">
+            <option value="Saturn">
+            <option value="Uranus">  
         </datalist>
       </section><br>
 
      <!--  Elements for Date of Travel -->
-      <label for="start">Depart Date:</label>
-      <input type="Date" id="departDate" name="trip-start" value="2022-08-04" min="2022-08-04" max="2022-12-31">
+      <label for="departDate">Depart Date:</label>
+      <input type="Date" id="departDate" name="departDate" value="2022-08-04" min="2022-08-04" max="2022-12-31">
       <label for="returnDate">Return Date:</label>
-      <input type="date" id="returnDate" name="trip-return" value="2022-08-04" min="2022-08-04"
+      <input type="date" id="returnDate" name="returnDate" value="2022-08-04" min="2022-08-04"
         max="2022-12-31"><br>     
 
       <!--  Elements for Personal Information -->
@@ -106,7 +106,7 @@
       <label for="subscription">
         <p for="subscription">Sign up for rewards and offers! we promise to spam you</p>
       </label>
-      <input type="submit" value="Book now" onclick="this.innerHTML = 'Ooops!'">
+      <input type="submit" value="Book now" onclick=" ">
 
     </form>
     </main>
