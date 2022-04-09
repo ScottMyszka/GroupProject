@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/validate.js"></script>
+  </script>
+  <title>Ticket Booking</title> 
+</head>
+
+<body>
+  <header id="header-background">
+
+    <!-- Tab links -->
+    <h1>TCPS Ticket Booking System</h1>
+    <p>Your once in a lifetime adventure starts now.....</p>
+    <nav>
+      <a href="home.html"><strong>Home</strong></a>
+      <a href="bookings.html"><strong>Bookings</strong></a>
+      <a href="cruisedeals.html"><strong>Cruise Deals</strong></a>
+      <a href="contactus.html"><strong>Contact Us</strong></a>  
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post">
+      
+       <!--  Radio buttons for travel information  one way or round trip-->
+       <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
+       <label for="oneway">One Way</label>
+       <input type="radio" id="roundtrip" name="trip">
+       <label for="roundtrip">Round Trip</label><br>
+
+      <!--  Arrival and destination picklist-->
+      <section class="cityInformation">
+        <label for="from">From</label>
+        <input type="text" id="from" name="arrivalCity" list="arrivalCitylist">
+        <datalist id="arrivalCitylist">
+          <option value="Malasia">
+          <option value="India">
+          <option value="America">
+          <option value="Sydney">
+          <option value="Paris">
+          <option value="Singapore">
+        </datalist>
+
+        <label for="to">To</label>
+        <input type="text" id="to" name="destinationCity" list="destinationCitylist">
+        <datalist id="destinationCitylist">
+          <option value="Malasia">
+          <option value="India">
+          <option value="America">
+          <option value="Sydney">
+          <option value="Paris">
+          <option value="Singapore">
+        </datalist>
+      </section><br>
+
+     <!--  Elements for Date of Travel -->
+      <label for="start">Depart Date:</label>
+      <input type="Date" id="departDate" name="trip-start" value="2022-08-04" min="2022-08-04" max="2022-12-31">
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" name="trip-return" value="2022-08-04" min="2022-08-04"
+        max="2022-12-31"><br>     
+
+      <!--  Elements for Personal Information -->
+      <section class="personalInformation">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name..." required>
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name..." required><br>
+
+      <!--  Elements for Gender Information -->
+        <label for="gender">Gender</label>
+        <input type="radio" id="female" name="gender" value="female" checked>
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+      </section>
+
+      <!--  Elements for Contact Information -->
+      <section class="contactInformation">
+        <label for="contactInformation">Contact Information:</label><br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email here..." required>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </section>
+      <br>
+
+     <!--  Ticket type deck ,cabin , suite  -->
+      <label for="ticket">Ticket</label>
+      <input type="radio" id="deck" name="ticket" value="deck" checked>
+      <label for="deck">Deck</label>
+      <input type="radio" id="cabin" name="ticket" value="cabin">
+      <label for="cabin">Cabin</label>
+      <input type="radio" id="suite" name="ticket" value="suite">
+      <label for="suite">Suite</label><br>
+
+      <input type="checkbox" id="subscription" name="subscription" value="yes">
+      <label for="subscription">
+        <p for="subscription">Sign up for rewards and offers! we promise to spam you</p>
+      </label>
+      <input type="submit" value="Book now" onclick="this.innerHTML = 'Ooops!'">
+
+    </form>
+    </main>
+    <footer>
+      <p>Copyright ©2022 TCPS Ticket Booking.com™. All rights reserved.</p>
+    </footer>
+</body>
+</html>
