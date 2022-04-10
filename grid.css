@@ -30,7 +30,16 @@
     max-width: auto;
     height: auto;
   }
- 
+
+header {
+  position: relative;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
