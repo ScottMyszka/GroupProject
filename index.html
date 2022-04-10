@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./grid.css">
-  
-
-</style>
-  <script src="js/validate.js"></script>
-  <div class="hero-image">
-    <img src="./SatryriconLogoH.png" alt="Satyricon Metro Cityscape at dusk" class="responsive">
-      </div>
-
-
   <title>Galactic Express Adventures</title> 
-  
+  <script src="js/validate.js"></script>
 </head>
 
 <body>
-
-   <h1>Galactic Express Booking System</h1>
-    <p>Break out of the ordinary and join us for a life changing adventure. Galactic Express is the galaxies most trusted providers of luxury space travel. Book your adventure today. 
-        <br>
-     </p>
+  <div class="hero-image">
+    <img src="./SatryriconLogoH.png" alt="Satyricon Metro Cityscape at dusk" class="responsive">
+  </div>
+  <h1>Galactic Express Booking System</h1>
+  <p>Break out of the ordinary and join us for a life changing adventure. 
+    Galactic Express is the galaxies most trusted providers of luxury space travel. 
+    Book your adventure today.
+  </p>
   
    <main> 
-            
+        <form>
     <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
 
  <!------div ticket--------->
  <div class="container">
       <div class="ticket">
 
-        <section class="numberOf">
+      <section class="numberOf">
        <!--  Radio buttons for travel information  one way or round trip-->
        <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
        <label for="oneway">One Way</label>
@@ -44,9 +37,9 @@
        <!-- Dropdown passenger count list, connect to contact js to populate contact fields-->
 
        <label for="headcount">Number of Passengers</label>
-       <select id = "headcount" name= "headcount">
-       <option value = "1">1</option>
-       <option value = "2">2</option>
+       <select id="headcount" name="headcount">
+       <option value="1">1</option>
+       <option value="2">2</option>
        </select>
        </section>
 
@@ -60,22 +53,20 @@
           <option value="McMurdo Station, Antarctica">   
           <option value="New York, United States">
           <option value="Sydney, Australia">
-          <option value="Tokyo, Japan">
-                
+          <option value="Tokyo, Japan">         
         </datalist>
         
         <label for="to">To</label>
         <input type="text" id="to" name="destinationCity" list="destinationCitylist">
         <datalist id="destinationCitylist">
           <option value="Hot Springs, Mercury">
-            <option value="Belle Isle de Amour,Venus">
-            <option value="Red Creek Manor, Mars">
-            <option value="Juniper Falls, Jupiter">
-            <option value="Satyricon Metro Hub, Saturn">
-            <option value="Armstrong Ski Resort, Moon">  
+          <option value="Belle Isle de Amour,Venus">
+          <option value="Red Creek Manor, Mars">
+          <option value="Juniper Falls, Jupiter">
+          <option value="Satyricon Metro Hub, Saturn">
+          <option value="Armstrong Ski Resort, Moon">  
         </datalist>
-        </section>
-       
+        </section>     
 
      <!--  Elements for Date of Travel -->
      <section class="date">
@@ -95,8 +86,6 @@
       <label for="cabin">Suborbital Cabin</label>
       <input type="radio" id="bay" name="ticket" value="bay">
       <label for="bay">Free-Float Bay</label>
-      <br>
-      <br>
 </section>
 </div>
 
@@ -129,19 +118,19 @@
       <!--Dropdown Gender-->
      
        <label for="gender">Gender</label>
-       <select id = "gender" name= "gender" required>
-       <option value = "Male">Male</option>
-       <option value = "Female">Female</option>
-       <option value = "Nonbinary">Nonbinary</option>
+       <select id="gender" name="gender" required>
+       <option value="Male">Male</option>
+       <option value="Female">Female</option>
+       <option value="Nonbinary">Nonbinary</option>
        </select> 
 
          <!-- Dietary selection-->
        <label for="meals">Dietary Request</label>
-       <select id = "meals" name= "meals">
-        <option value = "Vegan">Vegan</option>
-        <option value = "Halal">Halal</option>
-        <option value = "Gluten Free">Gluten Free</option>
-        <option value = "Raw Meat">Raw Meat</option>
+       <select id="meals" name="meals">
+        <option value="Vegan">Vegan</option>
+        <option value="Halal">Halal</option>
+        <option value="Gluten Free">Gluten Free</option>
+        <option value="Raw Meat">Raw Meat</option>
         </select>
     
        </section>
@@ -154,7 +143,7 @@
        <label for="organ">Are you an organ donor? Just curious.</label>
        <select id = "organ" name= "organ" required>
        <option value = "yes">Yes</option>
-       <option value = "no">no</option>
+       <option value = "no">No</option>
        <option value = "maybe">No, but interested</option>
         </select>
 
@@ -189,28 +178,23 @@
     
     
 <!--------div checkout------>
-       <div class="checkout">
-
-     
+      <div class="checkout">
       <input type="checkbox" id="subscription" name="subscription" value="yes">
       <label for="subscription">
-        <p for="subscription">I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
-      </label>
-       <input type="checkbox" id="legal" name="legal" value="yes" required>
+      I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
+      <input type="checkbox" id="legal" name="legal" value="yes" required></label>
       <label for="legal">
-        <p for="legal">I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
+      I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
       </label>
-           
-      <input type="submit" value="Book now" onclick=" ">
-      
+      <div><input type="submit" id="submit" value="Book now!" onclick=" "></div>
  </div>
     </form>
     </main>
     <div id="footer">
-   
     <footer>
       <p>Copyright ©2022 Thisco Chepat Corp, Galactic Express Booking.com™. All rights reserved.</p>
-    </footer> </div>
+    </footer> 
+  </div>
 </div>
 </body>
 </html>
