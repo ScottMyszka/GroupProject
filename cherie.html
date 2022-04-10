@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="./grid.css">
   
 
 </style>
   <script src="js/validate.js"></script>
   <div class="hero-image">
-    <img src="\SatryriconLogoH.png" alt="Satyricon Metro Cityscape at dusk" class="responsive">
+    <img src="./SatryriconLogoH.png" alt="Satyricon Metro Cityscape at dusk" class="responsive">
       </div>
 
 
@@ -20,31 +20,19 @@
 </head>
 
 <body>
-  <header id="header-background">
 
-   
-
-    <!-- Tab links -->
-    <h3>Galactic Express Booking System</h3>
+   <h1>Galactic Express Booking System</h1>
     <p>Break out of the ordinary and join us for a life changing adventure. Galactic Express is the galaxies most trusted providers of luxury space travel. Book your adventure today. 
         <br>
      </p>
-    <!--<nav>
-      <a href="home.html"><strong>Home</strong></a>
-      <a href="bookings.html"><strong>Bookings</strong></a>
-      <a href="spaceshipdeals.html"><strong>Spaceship Deals</strong></a>
-      <a href="contactus.html"><strong>Contact Us</strong></a>  
-    </nav>-->
-  </header>
-
-  <main> 
+  
+   <main> 
             
-    <form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post">
-        <div class="container">
+    <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
 
  <!------div ticket--------->
-
-      <div id="ticket">
+ <div class="container">
+      <div class="ticket">
 
         <section class="numberOf">
        <!--  Radio buttons for travel information  one way or round trip-->
@@ -59,11 +47,7 @@
        <select id = "headcount" name= "headcount">
        <option value = "1">1</option>
        <option value = "2">2</option>
-       <option value = "3">3</option>
-       <option value = "4">4</option>
        </select>
-        <br>
-       <br>
        </section>
 
       <!--  Arrival and destination picklist-->
@@ -90,9 +74,7 @@
             <option value="Satyricon Metro Hub, Saturn">
             <option value="Armstrong Ski Resort, Moon">  
         </datalist>
-      <br>
-      <br>
-    </section>
+        </section>
        
 
      <!--  Elements for Date of Travel -->
@@ -102,8 +84,6 @@
       <label for="returnDate">Return Date:</label>
       <input type="date" id="returnDate" name="returnDate" value="2022-08-04" min="2022-08-04"
         max="2022-12-31">
-        <br>  
-        <br>
 </section>   
 
        <!--  Ticket type Cryogenic, Cabin , Bay  -->
@@ -119,11 +99,10 @@
       <br>
 </section>
 </div>
-<br>
-       <br>
+
 <!----contact div------>
        
-       <div id="contact">
+       <div class="contact">
    
         <!--  Elements for Personal Information -->
       <section class="fullName">
@@ -131,8 +110,6 @@
         <input type="text" id="firstname" name="firstname" placeholder="Given name" required>
         <label for="lastname">Last name:</label>
         <input type="text" id="lastname" name="lastname" placeholder="Surname" required>
-        <br>
-        <br>
         </section>
      
 
@@ -142,8 +119,7 @@
         <input type="text" id="email" name="email" placeholder="Email" required>
         <label for="phone">Phone</label>
         <input type="text" id="phone" name="phone" placeholder="10-digit phone" required>
-        <br>
-        <br>
+        
       </section>
 
 <!---Health section---->
@@ -167,8 +143,7 @@
         <option value = "Gluten Free">Gluten Free</option>
         <option value = "Raw Meat">Raw Meat</option>
         </select>
-        <br>
-        <br>
+    
        </section>
     <!----bio section---->
 
@@ -192,52 +167,42 @@
         <option value = "AB">AB</option>
         <option value = "O">O</option>
         </select>
-      <br> 
-      <br>
+     
     </section>
 
-     
-      <br>
-           
+         
     </div>
 
 <!-----div payment------>
-<div id="payment">
+    <div class="payment">
 
-<!--payment fiels to validate-->
-<section class="payment">
+     <!--payment fields to validate-->
+   
     <label for="card">Credit Card:</label>
     <input type="text" id="card" name="card" placeholder="Card number..." required>
         <label for="expire">Expire date:</label>
         <input type="text" id="expire" name="expire" placeholder="dd mm yyyy" required>
         <label for="csc">CSC:</label>
         <input type="text" id="code" name="code" placeholder="3 digit security code" required>
-        <br>
-        <br>
-</section> 
+           
     </div> 
-     <br>
-     <br>
+    
+    
 <!--------div checkout------>
-       <div id="checkout">
+       <div class="checkout">
 
      
       <input type="checkbox" id="subscription" name="subscription" value="yes">
       <label for="subscription">
         <p for="subscription">I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
       </label>
-
-      <br>
-
-      <input type="checkbox" id="legal" name="legal" value="yes" required>
+       <input type="checkbox" id="legal" name="legal" value="yes" required>
       <label for="legal">
         <p for="legal">I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
       </label>
-      <br>
-      <br>
-      
+           
       <input type="submit" value="Book now" onclick=" ">
-        <br>
+      
  </div>
     </form>
     </main>
