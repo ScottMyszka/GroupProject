@@ -16,7 +16,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("spaceCity.png");
   
     /* Set a specific height */
-    height: auto%;
+    height: auto;
   
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
@@ -30,78 +30,87 @@
     height: auto;
   }
  
-.main {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.container {
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     box-sizing: border-box;
-    border: 3px solid rgb(255, 0, 60);
-    margin: 0;
-    padding: 30%; 
+    border: 1px solid rgb(255, 0, 60);
+    margin: 0px;
+    padding: 20px; 
     background-color: rgb(241, 197, 144);
 }
 .ticket {
     display: grid;
-    width:100%;
-    height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1 fr 1 fr 2 fr 1 fr;
-    gap: 10 px;
-    border: 3px solid blue;
-    margin: 10px;
-    padding: 100 px;
+    width:100vw;
+    grid-template-columns: repeat(3, 1 fr);
+    grid-template-rows: repeat(4, 1 fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px; 
+    font-size: 40px;
+    border: 1px solid blue;
+    margin: 1px;
+    padding: 20px;
     box-sizing: border-box;
-    align-content: stretch;
     
-    }
+       }
 
 .contact {
     display: grid;
     width:100vw;
-    grid-template-columns: repeat (2, 50%)
-    grid-template-rows: repeat(4, 1 fr;
-    grid-column-gap: .25 fr;
-    grid-row-gap: .5 fr; 
-    gap: 10 px;
+    grid-template-columns: repeat (2, 50%);
+    grid-template-rows: repeat(4, 1 fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px; 
+    font-size: 40px;
     border: 3px solid blue;
     margin: 10px;
-    padding: 30px; solid red;
+    padding: 20px; 
     box-sizing: border-box;
-        }
+    }
 
+.payment {
+    display: grid;
+    width:100vw;
+    grid-template-columns: repeat(3, 1 fr);
+    grid-template-rows: 1, 100%;
+    grid-column-gap: 40px;
+    font-size: 40px;
+    border: 3px solid blue;
+    margin: 10px;
+    padding: 20px solid rgb(255, 0, 140);
+    box-sizing: border-box;
+}
 .checkout {
     display: grid;
-    width:100%
-    grid-template-columns: repeat (1, 100%)
-    grid-template-rows: repeat(3, 100%);
-     grid-row-gap: .5 fr; 
-     gap: 10 px;
+    width:100vw;
+    grid-template-columns: 1, 100%;
+    grid-template-rows: repeat(3, 1 fr);
+    grid-row-gap: 20px; 
+    font-size: 40px;
     border: 3px solid blue;
     margin: 10px;
-    padding: 30px; solid red;
+    padding: 20px solid red;
     box-sizing: border-box;
-
+    
 }
 
 .ticket {background-color: rgb(252, 155, 8);
 grid-area:ticket;}
 .contact {background-color: aqua;
-grid-area: fullName; contactInformation; health
 }
-payment {background-color;
-grid-area: payment;}
+.payment {background-color:chartreuse
+}
 footer {background-color: blueviolet;
 grid-area: footer;}
-/*@media only screen at (max-width:550px){
-    .container{grid-template-columns: 1fr;
-    grid-template-rows: :default;}*/
-}
+
+
 
 
 .buttonClass {
     font-size:22px;
     font-family:Arial Black;
-    width:154px;
-    height:64px;
+    width:30px;
+    height:30px;
     border-width:1px;
     color:#fff;
     border-color:#599bb3;
