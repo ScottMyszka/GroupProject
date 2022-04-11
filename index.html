@@ -20,16 +20,16 @@
   <p>Break out of the ordinary and join us for a life changing adventure. Galactic Express is the galaxies most trusted providers of luxury space travel. Book your adventure today.</p>
   <main> 
     <div id="error"></div>
-    <form id="form" action="/" method="GET">
+    <form id="form" action="/thankupage.html" method="GET">
     <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
       <!------div ticket--------->
       <div class="container">
         <div class="ticket">
           <section class="numberOf">
             <!--  Radio buttons for travel information  one way or round trip-->
-            <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
+            <input type="radio" id="oneway" name="trip" value="oneway" checked onclick="disableRoundtrip()">
             <label for="oneway">One Way</label>
-            <input type="radio" id="roundtrip" name="trip">
+            <input type="radio" id="roundtrip" name="trip" value="roundtrip" onclick="enableRoundtrip()">
             <label for="roundtrip">Round Trip</label>
 
             <!-- Dropdown passenger count list, connect to contact js to populate contact fields-->
@@ -68,10 +68,9 @@
           <!--  Elements for Date of Travel -->
           <section class="date">
             <label for="departDate">Depart Date:</label>
-            <input type="Date" id="departDate" name="departDate" value="2022-08-04" min="2022-08-04" max="2022-12-31">
+            <input type="Date" id="departDate" name="departDate" value="new Date()" min="new Date()" max="2022-12-31">
             <label for="returnDate">Return Date:</label>
-            <input type="date" id="returnDate" name="returnDate" value="2022-08-04" min="2022-08-04"
-              max="2022-12-31">
+            <input type="date" id="returnDate" name="returnDate" value="new Date()" min="new Date()"max="2022-12-31" disabled>
           </section>   
             <!--  Ticket type Cryogenic, Cabin , Bay  -->
           <section class="ticketClass"> 
@@ -90,6 +89,7 @@
           <section class="fullName">
             <label for="firstname">First name:</label>
             <input type="text" id="firstname" name="firstname" placeholder="Given name">
+            
             <label for="lastname">Last name:</label>
             <input type="text" id="lastname" name="lastname" placeholder="Surname">
           </section>
@@ -160,7 +160,7 @@
             <label for="legal">I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
           </label>
         <div>
-          <button type = "submit">Submit</button>
+          <button type = "submit">Book Now</button>
         </div>
     </form>
   </main>

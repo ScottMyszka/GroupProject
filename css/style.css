@@ -9,7 +9,7 @@ header img {
 
 .container {
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 100;
+    font-weight: 300;
     box-sizing: border-box;
     border: 1px solid rgb(255, 0, 60);
     margin: 0px;
@@ -24,7 +24,7 @@ header img {
     grid-template-rows: repeat(4, 1 fr);
     grid-column-gap: 40px;
     grid-row-gap: 20px; 
-    font-size: 40px;
+    font-size: 20px;
     border: 1px solid blue;
     margin: auto;
     padding: 20px;
@@ -38,7 +38,7 @@ header img {
     grid-template-rows: repeat(4, 1 fr);
     grid-column-gap: 40px;
     grid-row-gap: 20px; 
-    font-size: 40px;
+    font-size: 20px;
     border: 3px solid blue;
     margin: auto;
     margin-top: 15px;
@@ -48,7 +48,7 @@ header img {
 
 .payment {
     width:100%;
-    font-size: 40px;
+    font-size: 20px;
     border: 3px solid blue;
     margin: auto;
     margin-top: 15px;
@@ -59,7 +59,7 @@ header img {
 .checkout {
     display: inline-block;
     width:100%;
-    font-size: 30px;
+    font-size: 20px;
     border: 3px solid blue;
     margin: auto;
     margin-top: 15px;
@@ -107,12 +107,12 @@ footer {
   background: linear-gradient(#408c99, #599bb3);
 }
 
-input[type=submit] {
+button[type=submit] {
   display: block;
   margin: 0 auto;
   height: 50px;
   width: 230px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 input[type=checkbox] {
@@ -163,4 +163,18 @@ input[type=date] {
 #card, #expire, #code {
   width: 200px;
   height: 30px;
+}
+#error{
+  color:red
+}
+#thankmessage{
+  font-size: 30px;
+  text-align: center;
+}
+input[type=button] {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 230px;
+  font-size: 20px;
 }
