@@ -1,0 +1,52 @@
+body {
+    background-image: url("images/");
+}
+
+header {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border: black solid 5px;
+    width: 70%;
+    /*background-image: url("images/");*/
+}
+
+.container {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    border: black solid 5px;
+    /*border-radius: 20%; (changes border corners to curved based on percentage)*/
+}
+
+.fromandto {
+    margin: 30px;
+}
+
+.onewayroundtrip {
+    margin: 30px;
+}
+
+.date {
+    margin: 30px;
+}
+
+.ticket {
+    margin: 30px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    column-gap: 50px;
+    row-gap: 25px;
+    margin: 30px;
+}
+
+.specials {
+    margin: 30px;
+}
+
+.submit {
+    margin: 30px;
+}
