@@ -1,79 +1,166 @@
-* {
-  /* prevents an automatic margin causing white space */
-  margin: 0px;
+header {
+  position: relative;
 }
 
-*{
-  margin: 0px;
-  padding: 0px;
+header img {
+  width: 100%;
+  height: auto;
 }
 
-#header-background{
-  background-image: url('../images/OIP.png'); /* Change the image */
-  width:100%;
-  height:200px;
+.container {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 0, 60);
+    margin: 0px;
+    padding: 20px; 
+    background-color: rgb(241, 197, 144);
+  }
+
+.ticket {
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(3, 1 fr);
+    grid-template-rows: repeat(4, 1 fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px; 
+    font-size: 40px;
+    border: 1px solid blue;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+.contact {
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat (2, 50%);
+    grid-template-rows: repeat(4, 1 fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px; 
+    font-size: 40px;
+    border: 3px solid blue;
+    margin: auto;
+    margin-top: 15px;
+    padding: 20px; 
+    box-sizing: border-box;
+  }
+
+.payment {
+    width:100%;
+    font-size: 40px;
+    border: 3px solid blue;
+    margin: auto;
+    margin-top: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+.checkout {
+    display: inline-block;
+    width:100%;
+    font-size: 30px;
+    border: 3px solid blue;
+    margin: auto;
+    margin-top: 15px;
+    padding-left: 60px;
+    padding-top: 20px;
+    box-sizing: border-box;  
+  }
+
+.ticket {
+    background-color: rgb(252, 155, 8);
+    grid-area:ticket;
+  }
+
+.contact {
+    background-color: aqua;
+  }
+.payment {
+    background-color:chartreuse
+  }
+
+footer {
+    background-color: blueviolet;
+    text-align: center;
+  }
+
+.buttonClass {
+    font-size:22px;
+    font-family:Arial Black;
+    width:30px;
+    height:30px;
+    border-width:1px;
+    color:#fff;
+    border-color:#599bb3;
+    font-weight:bold;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    box-shadow: 0px 10px 14px -7px #276873;
+    text-shadow: 0px 1px 0px #3d768a;
+    background:linear-gradient(#599bb3, #408c99);
+  }
   
+.buttonClass:hover {
+  background: linear-gradient(#408c99, #599bb3);
 }
 
-main{
-  margin: 20px auto;
-  padding:10px;
-  border: 1 solid black;
-
+input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 230px;
+  font-size: 25px;
 }
 
-form{
-  text-align: center;
-  margin: 20px auto;
-  padding:10px;
-  border: 1 solid black;
-}
-input{
-  margin: 20px auto;
-  padding:10px;
-  border: 1 solid black;
+input[type=checkbox] {
+  height: 17px;
+  width: 17px;
 }
 
-input[type="submit"]{
-  text-align: center;
-  
-  background-color: green;
-}
-section label{
-  margin-right: 5px;
-}
-section input{
-  margin: 20px;
-}
-.contactInformation{
-  margin: 10px;
-}
-body{
- 
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 30px;  
- background-size: cover;
- background-color:rgb(145, 194, 198);
+/* height and width need to be same for radio*/
+input[type=radio] {
+  height: 17px;
+  width: 17px;
 }
 
-
-a{
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-}
-nav{
-  width: 100%;  
-  margin-top: 50px;
-  margin-bottom: 10px;
+#headcount {
+  height: 30px;
+  width: 40px;
+  font-size: 20px;
 }
 
-nav a {
-  padding: 10px 100px;
-  background-color: rgb(23, 134, 159);
-  text-align: center;
-  margin: 10px;
+input[type=text] {
+  height: 30px;
+  width: 300px;
+  font-size: 20px;
 }
-footer{
-  text-align: center;
+
+input[type=date] {
+  height: 30px;
+  width: 175px;
+  font-size: 20px;
+}
+
+#gender, #meals {
+  height: 30px;
+  width: 125px;
+  font-size: 20px;
+}
+
+#organ {
+  height: 30px;
+  font-size: 20px;
+}
+
+#blood {
+  height: 30px;
+  font-size: 20px;
+}
+
+#card, #expire, #code {
+  width: 200px;
+  height: 30px;
 }

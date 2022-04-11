@@ -4,196 +4,164 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./grid.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Galactic Express Adventures</title> 
-  <script src="js/validate.js"></script>
+  <script src="./js/index.js"></script>
 </head>
 
 <body>
   <header>
     <div class="title">
-      <img src="./SatryriconLogoH.png">
+      <img src="./images/SatryriconLogoH.png">
       <h1>Galactic Express Booking System</h1>
     </div>
     
-  </header>
-    
-  <p>Break out of the ordinary and join us for a life changing adventure. 
-    Galactic Express is the galaxies most trusted providers of luxury space travel. 
-    Book your adventure today.
-  </p>
-  
-   <main> 
-        <form>
+  </header>    
+  <p>Break out of the ordinary and join us for a life changing adventure. Galactic Express is the galaxies most trusted providers of luxury space travel. Book your adventure today.</p>
+  <main> 
+    <form>
     <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
+      <!------div ticket--------->
+      <div class="container">
+        <div class="ticket">
+          <section class="numberOf">
+            <!--  Radio buttons for travel information  one way or round trip-->
+            <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
+            <label for="oneway">One Way</label>
+            <input type="radio" id="roundtrip" name="trip">
+            <label for="roundtrip">Round Trip</label>
 
- <!------div ticket--------->
- <div class="container">
-      <div class="ticket">
+            <!-- Dropdown passenger count list, connect to contact js to populate contact fields-->
+            <label for="headcount">Number of Passengers</label>
+            <select id="headcount" name="headcount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="2">3</option>
+            <option value="2">4</option>
+            </select>
+          </section>
 
-      <section class="numberOf">
-       <!--  Radio buttons for travel information  one way or round trip-->
-       <input type="radio" id="oneway" name="trip" value="oneway" checked="checked">
-       <label for="oneway">One Way</label>
-       <input type="radio" id="roundtrip" name="trip">
-       <label for="roundtrip">Round Trip</label>
-
-       <!-- Dropdown passenger count list, connect to contact js to populate contact fields-->
-
-       <label for="headcount">Number of Passengers</label>
-       <select id="headcount" name="headcount">
-       <option value="1">1</option>
-       <option value="2">2</option>
-       </select>
-       </section>
-
-      <!--  Arrival and destination picklist-->
-      <section class="cities">
-        <label for="from">From</label>
-        <input type="text" id="from" name="departureCity" list="departureCitylist">
-        <datalist id="departureCitylist">
-          <option value="Delhi, India">
-          <option value="London, England">
-          <option value="McMurdo Station, Antarctica">   
-          <option value="New York, United States">
-          <option value="Sydney, Australia">
-          <option value="Tokyo, Japan">         
-        </datalist>
+          <!--  Arrival and destination picklist-->
+          <section class="cities">
+            <label for="from">From</label>
+            <input type="text" id="from" name="departureCity" list="departureCitylist">
+            <datalist id="departureCitylist">
+              <option value="Delhi, India">
+              <option value="London, England">
+              <option value="McMurdo Station, Antarctica">   
+              <option value="New York, United States">
+              <option value="Sydney, Australia">
+              <option value="Tokyo, Japan">         
+            </datalist>
+            <label for="to">To</label>
+            <input type="text" id="to" name="destinationCity" list="destinationCitylist">
+            <datalist id="destinationCitylist">
+              <option value="Hot Springs, Mercury">
+              <option value="Belle Isle de Amour,Venus">
+              <option value="Red Creek Manor, Mars">
+              <option value="Juniper Falls, Jupiter">
+              <option value="Satyricon Metro Hub, Saturn">
+              <option value="Armstrong Ski Resort, Moon">  
+            </datalist>
+          </section>     
+          <!--  Elements for Date of Travel -->
+          <section class="date">
+            <label for="departDate">Depart Date:</label>
+            <input type="Date" id="departDate" name="departDate" value="2022-08-04" min="2022-08-04" max="2022-12-31">
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" value="2022-08-04" min="2022-08-04"
+              max="2022-12-31">
+          </section>   
+            <!--  Ticket type Cryogenic, Cabin , Bay  -->
+          <section class="ticketClass"> 
+            <label for="ticket">Ticket</label>
+            <input type="radio" id="cryogenic" name="ticket" value="cryogenic" checked>
+            <label for="cryogenic">Cryogenic Suite</label>
+            <input type="radio" id="cabin" name="ticket" value="cabin">
+            <label for="cabin">Suborbital Cabin</label>
+            <input type="radio" id="bay" name="ticket" value="bay">
+            <label for="bay">Free-Float Bay</label>
+          </section>
+        </div>
+        <!----contact div------>
+        <div class="contact"> 
+          <!--  Elements for Personal Information -->
+          <section class="fullName">
+            <label for="firstname">First name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Given name" required>
+            <label for="lastname">Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Surname" required>
+          </section>
         
-        <label for="to">To</label>
-        <input type="text" id="to" name="destinationCity" list="destinationCitylist">
-        <datalist id="destinationCitylist">
-          <option value="Hot Springs, Mercury">
-          <option value="Belle Isle de Amour,Venus">
-          <option value="Red Creek Manor, Mars">
-          <option value="Juniper Falls, Jupiter">
-          <option value="Satyricon Metro Hub, Saturn">
-          <option value="Armstrong Ski Resort, Moon">  
-        </datalist>
-        </section>     
+          <!--  Elements for Contact Information -->
+          <section class="contactInformation">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="10-digit phone" required>
+          </section>
 
-     <!--  Elements for Date of Travel -->
-     <section class="date">
-      <label for="departDate">Depart Date:</label>
-      <input type="Date" id="departDate" name="departDate" value="2022-08-04" min="2022-08-04" max="2022-12-31">
-      <label for="returnDate">Return Date:</label>
-      <input type="date" id="returnDate" name="returnDate" value="2022-08-04" min="2022-08-04"
-        max="2022-12-31">
-</section>   
+          <!---Health section---->
+          <section class="health">
+            <!--Dropdown Gender-->
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select> 
 
-       <!--  Ticket type Cryogenic, Cabin , Bay  -->
-       <section class="ticketClass"> 
-      <label for="ticket">Ticket</label>
-      <input type="radio" id="cryogenic" name="ticket" value="cryogenic" checked>
-      <label for="cryogenic">Cryogenic Suite</label>
-      <input type="radio" id="cabin" name="ticket" value="cabin">
-      <label for="cabin">Suborbital Cabin</label>
-      <input type="radio" id="bay" name="ticket" value="bay">
-      <label for="bay">Free-Float Bay</label>
-</section>
-</div>
+            <!-- Dietary selection-->
+            <label for="meals">Dietary Request</label>
+            <select id="meals" name="meals">
+              <option value="Vegan">Vegan</option>
+              <option value="Halal">Halal</option>
+              <option value="Gluten Free">Gluten Free</option>
+              <option value="Raw Meat">Raw Meat</option>
+            </select>
+          </section>
 
-<!----contact div------>
-       
-       <div class="contact">
-   
-        <!--  Elements for Personal Information -->
-      <section class="fullName">
-        <label for="firstname">First name:</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Given name" required>
-        <label for="lastname">Last name:</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Surname" required>
-        </section>
-     
-
-      <!--  Elements for Contact Information -->
-      <section class="contactInformation">
-         <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email" required>
-        <label for="phone">Phone</label>
-        <input type="text" id="phone" name="phone" placeholder="10-digit phone" required>
-        
-      </section>
-
-<!---Health section---->
-    
-      <section class="health">
-     
-      <!--Dropdown Gender-->
-     
-       <label for="gender">Gender</label>
-       <select id="gender" name="gender" required>
-       <option value="Male">Male</option>
-       <option value="Female">Female</option>
-       <option value="Nonbinary">Nonbinary</option>
-       </select> 
-
-         <!-- Dietary selection-->
-       <label for="meals">Dietary Request</label>
-       <select id="meals" name="meals">
-        <option value="Vegan">Vegan</option>
-        <option value="Halal">Halal</option>
-        <option value="Gluten Free">Gluten Free</option>
-        <option value="Raw Meat">Raw Meat</option>
-        </select>
-    
-       </section>
-    <!----bio section---->
-
-        <section bio="bioInformation">
-
-       <!--Dropdown Organ donation-->
-       
-       <label for="organ">Are you an organ donor? Just curious.</label>
-       <select id = "organ" name= "organ" required>
-       <option value = "yes">Yes</option>
-       <option value = "no">No</option>
-       <option value = "maybe">No, but interested</option>
-        </select>
-
-        <!--Dropdown for Blood type-->
-       
-        <label for="blood">Blood Type</label>
-        <select id = "blood" name= "blood">
-        <option value = "A">A</option>
-        <option value = "B">B</option>
-        <option value = "AB">AB</option>
-        <option value = "O">O</option>
-        </select>
-     
-    </section>
-
-         
-    </div>
-
-<!-----div payment------>
-    <div class="payment">
-
-     <!--payment fields to validate-->
-   
-    <label for="card">Credit Card:</label>
-    <input type="text" id="card" name="card" placeholder="Card number..." required>
-        <label for="expire">Expire date:</label>
-        <input type="text" id="expire" name="expire" placeholder="dd mm yyyy" required>
-        <label for="csc">CSC:</label>
-        <input type="text" id="code" name="code" placeholder="3 digit security code" required>
-           
-    </div> 
-    
-    
-<!--------div checkout------>
-      <div class="checkout">
-      <input type="checkbox" id="subscription" name="subscription" value="yes">
-      <label for="subscription">
-      I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
-      <input type="checkbox" id="legal" name="legal" value="yes" required></label>
-      <label for="legal">
-      I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
-      </label>
-      <div><input type="submit" id="submit" value="Book now!" onclick=" "></div>
- </div>
+          <!----bio section---->
+          <section bio="bioInformation">
+            <!--Dropdown Organ donation-->  
+            <label for="organ">Are you an organ donor? Just curious.</label>
+            <select id = "organ" name= "organ" required>
+              <option value = "yes">Yes</option>
+              <option value = "no">No</option>
+              <option value = "maybe">No, but interested</option>
+            </select>
+            <!--Dropdown for Blood type-->
+            <label for="blood">Blood Type</label>
+            <select id = "blood" name= "blood">
+              <option value = "A">A</option>
+              <option value = "B">B</option>
+              <option value = "AB">AB</option>
+              <option value = "O">O</option>
+            </select> 
+          </section>
+        </div>
+        <!-----div payment------>
+        <div class="payment">
+          <!--payment fields to validate-->
+          <label for="card">Credit Card:</label>
+          <input type="text" id="card" name="card" placeholder="Card number..." required>
+          <label for="expire">Expire date:</label>
+          <input type="text" id="expire" name="expire" placeholder="dd mm yyyy" required>
+          <label for="csc">CSC:</label>
+          <input type="text" id="code" name="code" placeholder="3 digit security code" required>        
+        </div> 
+        <!--------div checkout------>
+        <div class="checkout">
+          <input type="checkbox" id="subscription" name="subscription" value="yes">
+          <label for="subscription">I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
+            <input type="checkbox" id="legal" name="legal" value="yes" required>
+          </label>
+            <label for="legal">I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
+          </label>
+        <div><input type="submit" id="submit" value="Book now!" onclick=""></div>
+      </div>
     </form>
-    </main>
+  </main>
     <div id="footer">
     <footer>
       <p>Copyright ©2022 Thisco Chepat Corp, Galactic Express Booking.com™. All rights reserved.</p>
