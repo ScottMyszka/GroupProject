@@ -4,18 +4,14 @@ By Scott, Cherie, Patrick and Thiru.
 
 ## Features
 
-- Choose
+- Choose trip details
 - Input passenger(s) detail(s)
-- Add payment details
-- Local storage for tasks to not get removed
+- Input payment details
 
 ## Screenshots
 
 Wireframe 
-![Wireframe Screenshot]
 
-
-![App Screenshot]
-
+App Screenshot
 
 ## Improvements
