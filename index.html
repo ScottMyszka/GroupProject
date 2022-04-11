@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <title>Galactic Express Adventures</title> 
-  <script src="./js/index.js"></script>
+  <script defer src="./js/validation.js"></script>
 </head>
 
 <body>
@@ -15,11 +15,12 @@
       <img src="./images/SatryriconLogoH.png">
       <h1>Galactic Express Booking System</h1>
     </div>
-    
+
   </header>    
   <p>Break out of the ordinary and join us for a life changing adventure. Galactic Express is the galaxies most trusted providers of luxury space travel. Book your adventure today.</p>
   <main> 
-    <form>
+    <div id="error"></div>
+    <form id="form" action="/" method="GET">
     <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
       <!------div ticket--------->
       <div class="container">
@@ -88,24 +89,24 @@
           <!--  Elements for Personal Information -->
           <section class="fullName">
             <label for="firstname">First name:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Given name" required>
+            <input type="text" id="firstname" name="firstname" placeholder="Given name">
             <label for="lastname">Last name:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Surname" required>
+            <input type="text" id="lastname" name="lastname" placeholder="Surname">
           </section>
         
           <!--  Elements for Contact Information -->
           <section class="contactInformation">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="email" name="email" placeholder="Email">
             <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="10-digit phone" required>
+            <input type="text" id="phone" name="phone" placeholder="10-digit phone">
           </section>
 
           <!---Health section---->
           <section class="health">
             <!--Dropdown Gender-->
             <label for="gender">Gender</label>
-            <select id="gender" name="gender" required>
+            <select id="gender" name="gender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Nonbinary">Nonbinary</option>
@@ -125,7 +126,7 @@
           <section bio="bioInformation">
             <!--Dropdown Organ donation-->  
             <label for="organ">Are you an organ donor? Just curious.</label>
-            <select id = "organ" name= "organ" required>
+            <select id = "organ" name= "organ">
               <option value = "yes">Yes</option>
               <option value = "no">No</option>
               <option value = "maybe">No, but interested</option>
@@ -144,22 +145,23 @@
         <div class="payment">
           <!--payment fields to validate-->
           <label for="card">Credit Card:</label>
-          <input type="text" id="card" name="card" placeholder="Card number..." required>
+          <input type="text" id="card" name="card" placeholder="Card number...">
           <label for="expire">Expire date:</label>
-          <input type="text" id="expire" name="expire" placeholder="dd mm yyyy" required>
+          <input type="text" id="expire" name="expire" placeholder="dd mm yyyy">
           <label for="csc">CSC:</label>
-          <input type="text" id="code" name="code" placeholder="3 digit security code" required>        
+          <input type="text" id="code" name="code" placeholder="3 digit security code">        
         </div> 
         <!--------div checkout------>
         <div class="checkout">
           <input type="checkbox" id="subscription" name="subscription" value="yes">
           <label for="subscription">I want more specials and promotions. Sign me up so I can continue my adventuring.</p>
-            <input type="checkbox" id="legal" name="legal" value="yes" required>
+            <input type="checkbox" id="legal" name="legal" value="yes">
           </label>
             <label for="legal">I  release Galactic Express, Thisco Chepat Corps, and their intergalictic allies.</p>
           </label>
-        <div><input type="submit" id="submit" value="Book now!" onclick=""></div>
-      </div>
+        <div>
+          <button type = "submit">Submit</button>
+        </div>
     </form>
   </main>
     <div id="footer">
