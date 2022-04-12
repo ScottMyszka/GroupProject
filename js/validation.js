@@ -17,23 +17,48 @@ const expire = document.getElementById("expire");
 const code = document.getElementById("code");
 const firstnameError = document.getElementById("firstnameError");
 const lastnameError = document.getElementById("lastnameError");
+const firstname2 = document.getElementById("firstname2");
+const lastname2 = document.getElementById("lastname2");
+const firstname3 = document.getElementById("firstname3");
+const lastname3 = document.getElementById("lastname3");
+const email2 = document.getElementById("email2");
+const phone2 = document.getElementById("phone2");
+const email3 = document.getElementById("email3");
+const phone3 = document.getElementById("phone3");
 let messages = [];
 
 form.addEventListener("submit", (e) => {
   messages = [];
   //setDefaultErrorMessages();
-  if (
-    !(
-      validateFromField() &&
-      validateToField() &&
-      validateTravelDates() &&
-      validateFirstName() &&
-      validateLastName() &&
-      validateEmail() &&
-      validatePhone() &&
-      validateCreditcard() &&
-      validateExpiryDate() &&
-      validateCSC()
+  let FromValidResult = validateFromField();
+  let toValidResult = validateToField();
+  let travelDateValidResult = validateTravelDates();
+  let firstname1ValidResult = validateFirstName(firstname);
+  let lastname1ValidResult = validateLastName(lastname);
+  let email1ValidResult = validateEmail(email);
+  let phoneValidResult = validatePhone(phone);
+  let creditcardValidResult = validateCreditcard();
+  let expiryValidResult = validateExpiryDate();
+  let cscValidResult = validateCSC();
+  // let firstname1ValidResult2 = validateFirstName(firstname2);
+  // let lastname1ValidResult2 = validateLastName(lastname2);
+  // let email1ValidResult2 = validateEmail(email2);
+  // let phoneValidResult2 = validatePhone(phone2);
+  // let firstname1ValidResult3 = validateFirstName(firstname3);
+  // let lastname1ValidResult3 = validateLastName(lastname3);
+  // let email1ValidResult3 = validateEmail(email3);
+  // let phoneValidResult3 = validatePhone(phone3);
+  
+  if (!(FromValidResult &&
+      toValidResult &&
+      travelDateValidResult &&
+      firstname1ValidResult &&
+      lastname1ValidResult &&
+      email1ValidResult &&
+      phoneValidResult &&
+      creditcardValidResult &&
+      expiryValidResult &&
+      cscValidResult
     )
   ) {
     e.preventDefault();
@@ -41,7 +66,7 @@ form.addEventListener("submit", (e) => {
 });
 
 //Validation rule on First name
-function validateFirstName() {
+function validateFirstName(firstname) {
   messages = [];
   var regex = /^[A-Za-z\s]+$/;
   if (firstname.value === "" || firstname.value == null) {
@@ -85,7 +110,8 @@ function validateLastName() {
 //Validation rule on email
 function validateEmail() {
   let messages = [];
-  let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/ ;
+  let mailRegex =
+    /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
   if (email.value === "" || email.value == null) {
     messages.push("Email is required.");
   } else if (!mailRegex.test(email.value)) {
@@ -190,7 +216,9 @@ function validateExpiryDate() {
   if (expire.value === "" || expire.value === null) {
     messages.push("Please enter expiry date of your card.");
   } else if (!reg.test(expire.value)) {
-    messages.push("Please enter in the month and the year in the mm/yy format as numbers.");
+    messages.push(
+      "Please enter in the month and the year in the mm/yy format as numbers."
+    );
   } else {
     result = expire.value.toString().split("/");
   }
@@ -272,21 +300,20 @@ function disableRoundtrip() {
   returnDate.setAttribute("disabled", true);
 }
 
-
 const headCount = document.getElementById("headcount");
-const passenger2 = document.getElementById("passenger2")
-const passenger3 = document.getElementById("passenger3")
+const passenger2 = document.getElementById("passenger2");
+const passenger3 = document.getElementById("passenger3");
 //Number of passengers
 function numberOfPeople() {
   if (headCount.value == 1) {
-    passenger2.style.display ="none"
-    passenger3.style.display ="none";
+    passenger2.style.display = "none";
+    passenger3.style.display = "none";
   } else if (headCount.value == 2) {
-    passenger2.style.display ="block";
-    passenger3.style.display ="none";
+    passenger2.style.display = "block";
+    passenger3.style.display = "none";
   } else if (headCount.value == 3) {
-    passenger2.style.display ="block";
-    passenger3.style.display ="block";
+    passenger2.style.display = "block";
+    passenger3.style.display = "block";
   }
 }
 
