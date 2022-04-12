@@ -21,7 +21,6 @@
   <main> 
     <div id="error"></div>
     <form id="form" action="/thankupage.html" method="GET">
-    <!--<form onsubmit="validateTheForm()" action="/my-booking-form-page" method="post"--->
       <!------div ticket--------->
       <div class="container">
         <div class="ticket">
@@ -45,7 +44,7 @@
           <!--  Arrival and destination picklist-->
           <section class="cities">
             <label for="from">From</label>
-            <input type="text" id="from" name="departureCity" list="departureCitylist">
+            <input type="text" id="from" name="departureCity" list="departureCitylist" required>
             <datalist id="departureCitylist">
               <option value="Delhi, India">
               <option value="London, England">
@@ -55,7 +54,7 @@
               <option value="Tokyo, Japan">         
             </datalist>
             <label for="to">To</label>
-            <input type="text" id="to" name="destinationCity" list="destinationCitylist">
+            <input type="text" id="destinationCity" name="destinationCity" list="destinationCitylist" disabled required>
             <datalist id="destinationCitylist">
               <option value="Hot Springs, Mercury">
               <option value="Belle Isle de Amour,Venus">
