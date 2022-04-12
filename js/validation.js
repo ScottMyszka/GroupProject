@@ -48,8 +48,10 @@ form.addEventListener("submit", (e) => {
   // let lastname1ValidResult3 = validateLastName(lastname3);
   // let email1ValidResult3 = validateEmail(email3);
   // let phoneValidResult3 = validatePhone(phone3);
-  
-  if (!(FromValidResult &&
+
+  if (
+    !(
+      FromValidResult &&
       toValidResult &&
       travelDateValidResult &&
       firstname1ValidResult &&
@@ -346,3 +348,4 @@ function setDefaultErrorMessages() {
   expireError.innerText = "";
   dateError.innerText = "";
 }
+
