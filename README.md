@@ -11,7 +11,14 @@ By Scott, Cherie, Patrick and Thiru.
 ## Screenshots
 
 Wireframe 
-
+(https://files.slack.com/files-pri/T032KF3K1R6-F03BV28C28G/wireframeinitial.png)
+(https://files.slack.com/files-pri/T032KF3K1R6-F03BV28PF9N/wireframev2.png)
 App Screenshot
 
 ## Improvements
+
+- Adding a personalised meesage after submission
+- More passengers
+- Moving the credit form after submitting details
+- Aligning the objects
+- Adding more images
