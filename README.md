@@ -11,8 +11,8 @@ By Scott, Cherie, Patrick and Thiru.
 ## Screenshots
 
 Wireframe 
-![Wireframe1](https://files.slack.com/files-pri/T032KF3K1R6-F03BV28C28G/wireframeinitial.png)
-![Wireframe2](https://files.slack.com/files-pri/T032KF3K1R6-F03BV28PF9N/wireframev2.png)
+![Wireframe1](https://cdn.discordapp.com/attachments/810876138237984772/963408518734573578/wireframeInitial.png)
+![Wireframe2](https://cdn.discordapp.com/attachments/810876138237984772/963408518457753641/wireframev2.png)
 App Screenshot
 
 ## Improvements
