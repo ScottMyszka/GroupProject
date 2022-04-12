@@ -33,11 +33,10 @@
 
             <!-- Dropdown passenger count list, connect to contact js to populate contact fields-->
             <label for="headcount">Number of Passengers</label>
-            <select id="headcount" name="headcount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="2">3</option>
-            <option value="2">4</option>
+            <select id="headcount" name="headcount" onchange="test()">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </section>
 
@@ -147,6 +146,133 @@
             </select> 
           </section>
         </div>
+
+        <!----contact div------>
+        <div class="contact" id="passenger2" style="display:none"> 
+          <!--  Elements for Personal Information -->
+          <section class="fullName">
+            <label for="firstname">First name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Given name">
+            <div id="firstnameError"  class="errormessage"></div>
+            
+            <label for="lastname">Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Surname">
+            <div id="lastnameError" class="errormessage"></div>
+          </section>
+        
+          <!--  Elements for Contact Information -->
+          <section class="contactInformation">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <div id="emailError" class="errormessage"></div>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="10-digit phone">
+            <div id="phoneError" class="errormessage"></div>
+          </section>
+
+          <!---Health section---->
+          <section class="health">
+            <!--Dropdown Gender-->
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select> 
+
+            <!-- Dietary selection-->
+            <label for="meals">Dietary Request</label>
+            <select id="meals" name="meals">
+              <option value="Vegan">Vegan</option>
+              <option value="Halal">Halal</option>
+              <option value="Gluten Free">Gluten Free</option>
+              <option value="Raw Meat">Raw Meat</option>
+            </select>
+          </section>
+
+          <!----bio section---->
+          <section bio="bioInformation">
+            <!--Dropdown Organ donation-->  
+            <label for="organ">Are you an organ donor? Just curious.</label>
+            <select id = "organ" name= "organ">
+              <option value = "yes">Yes</option>
+              <option value = "no">No</option>
+              <option value = "maybe">No, but interested</option>
+            </select>
+            <!--Dropdown for Blood type-->
+            <label for="blood">Blood Type</label>
+            <select id = "blood" name= "blood">
+              <option value = "A">A</option>
+              <option value = "B">B</option>
+              <option value = "AB">AB</option>
+              <option value = "O">O</option>
+            </select> 
+          </section>
+        </div>
+
+        <!----contact div------>
+        <div class="contact" id="passenger3" style="display:none"> 
+          <!--  Elements for Personal Information -->
+          <section class="fullName">
+            <label for="firstname">First name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Given name">
+            <div id="firstnameError"  class="errormessage"></div>
+            
+            <label for="lastname">Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Surname">
+            <div id="lastnameError" class="errormessage"></div>
+          </section>
+        
+          <!--  Elements for Contact Information -->
+          <section class="contactInformation">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <div id="emailError" class="errormessage"></div>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="10-digit phone">
+            <div id="phoneError" class="errormessage"></div>
+          </section>
+
+          <!---Health section---->
+          <section class="health">
+            <!--Dropdown Gender-->
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Nonbinary">Nonbinary</option>
+            </select> 
+
+            <!-- Dietary selection-->
+            <label for="meals">Dietary Request</label>
+            <select id="meals" name="meals">
+              <option value="Vegan">Vegan</option>
+              <option value="Halal">Halal</option>
+              <option value="Gluten Free">Gluten Free</option>
+              <option value="Raw Meat">Raw Meat</option>
+            </select>
+          </section>
+
+          <!----bio section---->
+          <section bio="bioInformation">
+            <!--Dropdown Organ donation-->  
+            <label for="organ">Are you an organ donor? Just curious.</label>
+            <select id = "organ" name= "organ">
+              <option value = "yes">Yes</option>
+              <option value = "no">No</option>
+              <option value = "maybe">No, but interested</option>
+            </select>
+            <!--Dropdown for Blood type-->
+            <label for="blood">Blood Type</label>
+            <select id = "blood" name= "blood">
+              <option value = "A">A</option>
+              <option value = "B">B</option>
+              <option value = "AB">AB</option>
+              <option value = "O">O</option>
+            </select> 
+          </section>
+        </div>
+
         <!-----div payment------>
         <div class="payment">
           <!--payment fields to validate-->
