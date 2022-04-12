@@ -64,6 +64,7 @@ function validateFirstName() {
 function validateLastName() {
   let messages = [];
   var regex = /^[A-Za-z\s]+$/;
+
   if (lastname.value === "" || lastname.value == null) {
     messages.push("Last name is required");
   } else if (!regex.test(lastname.value)) {
@@ -71,6 +72,7 @@ function validateLastName() {
   } else if (lastname.value.length <= 2) {
     messages.push("Last name should be more than 2 characters");
   }
+
   if (messages.length > 0) {
     lastnameError.innerText = messages.join(", ");
     return false;
@@ -83,12 +85,11 @@ function validateLastName() {
 //Validation rule on email
 function validateEmail() {
   let messages = [];
-  let mailRegex =
-    /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
+  let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/ ;
   if (email.value === "" || email.value == null) {
-    messages.push("email is required");
+    messages.push("Email is required");
   } else if (!mailRegex.test(email.value)) {
-    messages.push("Please enter proper email");
+    messages.push("Please enter a proper email");
   }
   if (messages.length > 0) {
     emailError.innerText = messages.join(", ");
@@ -104,9 +105,9 @@ function validatePhone() {
   let messages = [];
   let phoneRegex = "^[0-9]*$";
   if (phone.value === "" || phone.value == null) {
-    messages.push("phone is required");
+    messages.push("Phone number is required");
   } else if (!phone.value.match(phoneRegex)) {
-    messages.push("Phone number allows onlynumbers ");
+    messages.push("Phone number only allows numerical chracters");
   } else if (!(phone.value.length === 10)) {
     messages.push("Phone number must have 10 numbers");
   }
@@ -269,6 +270,24 @@ function enableRoundtrip() {
 //Disable roundtrip date
 function disableRoundtrip() {
   returnDate.setAttribute("disabled", true);
+}
+
+
+const headCount = document.getElementById("headcount");
+const passenger2 = document.getElementById("passenger2")
+const passenger3 = document.getElementById("passenger3")
+//Number of passengers
+function test() {
+  if (headCount.value == 1) {
+    passenger2.style.display ="none"
+    passenger3.style.display ="none";
+  } else if (headCount.value == 2) {
+    passenger2.style.display ="block";
+    passenger3.style.display ="none";
+  } else if (headCount.value == 3) {
+    passenger2.style.display ="block";
+    passenger3.style.display ="block";
+  }
 }
 
 //set default data to all feilds on the form
