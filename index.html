@@ -12,7 +12,7 @@
 <body>
   <header>
     <div class="title">
-      <img src="./images/SatryriconLogoH.png">
+      <img src="./images/SatryriconLogoH.png" alt="">
       <h1>Galactic Express Booking System</h1>
     </div>
 
@@ -43,8 +43,8 @@
 
           <!--  Arrival and destination picklist-->
           <section class="cities">
-            <label for="from">From</label>
-            <input type="text" id="from" name="departureCity" list="departureCitylist" required>
+            <label for="departureCity">From</label>
+            <input type="text" id="departureCity"  name="departureCity" list="departureCitylist">
             <datalist id="departureCitylist">
               <option value="Delhi, India">
               <option value="London, England">
@@ -53,8 +53,8 @@
               <option value="Sydney, Australia">
               <option value="Tokyo, Japan">         
             </datalist>
-            <label for="to">To</label>
-            <input type="text" id="destinationCity" name="destinationCity" list="destinationCitylist" disabled required>
+            <label for="destinationCity">To</label>
+            <input type="text" id="destinationCity" name="destinationCity" list="destinationCitylist">
             <datalist id="destinationCitylist">
               <option value="Hot Springs, Mercury">
               <option value="Belle Isle de Amour,Venus">
@@ -146,7 +146,7 @@
           <label for="card">Credit Card:</label>
           <input type="text" id="card" name="card" placeholder="Card number...">
           <label for="expire">Expire date:</label>
-          <input type="text" id="expire" name="expire" placeholder="dd mm yyyy">
+          <input type="text" id="expire" name="expire" placeholder="mm/yy">
           <label for="csc">CSC:</label>
           <input type="text" id="code" name="code" placeholder="3 digit security code">        
         </div> 
