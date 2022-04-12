@@ -19,16 +19,16 @@ let messages = [];
 
 form.addEventListener("submit", (e) => {
   messages = [];
-  // validateFromField();
-  // validateToField();
-  //validateFirstName();
-  // validateLastName();
-  // validateEmail();
-  // validatePhone();
-  // validateCreditcard();
-  // validateCSC();
+  validateFromField();
+  validateToField();
   validateTravelDates();
-  //validateExpiryDate();
+  validateFirstName();
+  validateLastName();
+  validateEmail();
+  validatePhone();
+  validateCreditcard();
+  validateExpiryDate();
+  validateCSC();
 
   if (messages.length > 0) {
     e.preventDefault();
@@ -57,7 +57,7 @@ function validateLastName() {
     messages.push("Last name must not contain numbers or special characters");
   } else if (lastname.value.length <= 2) {
     messages.push("Last name should be more than 2 characters");
-  }
+  }  
 }
 
 //Validation rule on email
@@ -69,6 +69,7 @@ function validateEmail() {
   } else if (!mailRegex.test(email.value)) {
     messages.push("Please enter proper email");
   }
+  
 }
 
 //Validation rule on phone number
@@ -92,9 +93,8 @@ function validateTravelDates() {
     messages.push("Please select your depart travel date");
   } else {
     departDate1 = new Date(departDate.value);
-   
-    if (!(departdate1 >= today))
-    {
+
+    if (!(departDate1 >= today)) {
       messages.push("Depart date must be today or greater than today");
     }
   }
@@ -110,7 +110,7 @@ function validateTravelDates() {
         messages.push("Return date must be greater than depart date");
       }
     }
-  } 
+  }
 }
 
 //Validation rule on credit card
@@ -196,9 +196,7 @@ function setDefaultData() {
   oneway.checked = "true";
   roundtrip.checked = "false";
   email.innerText = "";
-  phone.innerText = "";
-  departDate.innerText = new Date();
-  returnDate.innerText = new Date();
+  phone.innerText = "";  
   creditcard.innerText = "";
   code.innerText = "";
   expire.innerText = "";
