@@ -53,6 +53,7 @@
               <option value="Sydney, Australia">
               <option value="Tokyo, Japan">         
             </datalist>
+            <div id="fromError" class="errormessage"></div>
             <label for="destinationCity">To</label>
             <input type="text" id="destinationCity" name="destinationCity" list="destinationCitylist">
             <datalist id="destinationCitylist">
@@ -63,6 +64,7 @@
               <option value="Satyricon Metro Hub, Saturn">
               <option value="Armstrong Ski Resort, Moon">  
             </datalist>
+            <div id="toError" class="errormessage"></div>
           </section>     
           <!--  Elements for Date of Travel -->
           <section class="date">
@@ -70,6 +72,7 @@
             <input type="Date" id="departDate" name="departDate" value="new Date()" min="new Date()" max="2022-12-31">
             <label for="returnDate">Return Date:</label>
             <input type="date" id="returnDate" name="returnDate" value="new Date()" min="new Date()"max="2022-12-31" disabled>
+            <div id="dateError" class="errormessage"></div>
           </section>   
             <!--  Ticket type Cryogenic, Cabin , Bay  -->
           <section class="ticketClass"> 
@@ -88,17 +91,21 @@
           <section class="fullName">
             <label for="firstname">First name:</label>
             <input type="text" id="firstname" name="firstname" placeholder="Given name">
+            <div id="firstnameError"  class="errormessage"></div>
             
             <label for="lastname">Last name:</label>
             <input type="text" id="lastname" name="lastname" placeholder="Surname">
+            <div id="lastnameError" class="errormessage"></div>
           </section>
         
           <!--  Elements for Contact Information -->
           <section class="contactInformation">
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Email">
+            <div id="emailError" class="errormessage"></div>
             <label for="phone">Phone</label>
             <input type="text" id="phone" name="phone" placeholder="10-digit phone">
+            <div id="phoneError" class="errormessage"></div>
           </section>
 
           <!---Health section---->
@@ -145,10 +152,13 @@
           <!--payment fields to validate-->
           <label for="card">Credit Card:</label>
           <input type="text" id="card" name="card" placeholder="Card number...">
+          <div id="creditcardError" class="errormessage"></div>
           <label for="expire">Expire date:</label>
           <input type="text" id="expire" name="expire" placeholder="mm/yy">
+          <div id="expiredateError" class="errormessage"></div>
           <label for="csc">CSC:</label>
-          <input type="text" id="code" name="code" placeholder="3 digit security code">        
+          <input type="text" id="code" name="code" placeholder="3 digit security code"> 
+          <div id="cscError" class="errormessage"></div>       
         </div> 
         <!--------div checkout------>
         <div class="checkout">
