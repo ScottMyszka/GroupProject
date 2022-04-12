@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bree Serif', serif;
+}
+
+body {
+
+  background: url(../images/overlaybackground.png); 
+   
+}
+
 header {
   position: relative;
 }
@@ -5,83 +17,107 @@ header {
 header img {
   width: 100%;
   height: auto;
+ 
 }
+
+h1 {text-align: center; 
+  font-size: 30px; 
+  color: rgb(3, 3, 3);
+  letter-spacing: 2px;
+ 
+}
+p {margin-left: 20%;
+  margin-right: 20%;
+  text-align: auto; 
+  font-size: 22px;
+   padding: 10px;
+ 
+}
+
+.header {
+display:grid;
+margin: 0;
+grid-auto-flow: row-auto;
+    }
 
 .container {
-  font-family: "Times New Roman", Times, serif;
   font-weight: 300;
   box-sizing: border-box;
-  border: 1px solid rgb(255, 0, 60);
-  margin: 0px;
-  padding: 20px;
-  background-color: rgb(241, 197, 144);
-}
-
-.ticket {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1 fr);
-  grid-template-rows: repeat(4, 1 fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  font-size: 20px;
-  border: 1px solid blue;
+  width: fit-content;
   margin: auto;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: auto;
+
+  background-color: rgb(241, 212, 176);
+  opacity: 85%;
+  
 }
+.ticket  {
+  display:flexbox ;
+  width: 500, fit-content;
+ margin: auto;
+  font-size: 20px;
+   padding: 10px;
+  
+
+} 
+ .contact {
+  display:flexbox ;
+  width: fit-content;
+ margin: auto;
+  font-size: 20px;
+   padding: 20px;
+
+} 
+ .payment {
+  display:flexbox ;
+  width: fit-content;
+ margin: auto;
+  font-size: 20px;
+   padding: 20px;
+
+} 
+ .contact {
+  display:flexbox ;
+  width: fit-content;
+ margin: auto;
+  font-size: 20px;
+   padding: 20px;
+
+} 
 
 .contact {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat (2, 50%);
-  grid-template-rows: repeat(4, 1 fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  font-size: 20px;
-  border: 3px solid blue;
-  margin: auto;
+  display: flexbox;
+  width: fit-content;
+  height: fit-content;
+   margin: auto;
   margin-top: 15px;
   padding: 20px;
-  box-sizing: border-box;
+   font-size: 20px;
 }
 
 .payment {
   width: 100%;
   font-size: 20px;
-  border: 3px solid blue;
-  margin: auto;
+   margin: auto;
   margin-top: 15px;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .checkout {
-  display: inline-block;
+  display:inline
   width: 100%;
-  font-size: 20px;
-  border: 3px solid blue;
-  margin: auto;
-  margin-top: 15px;
-  padding-left: 60px;
-  padding-top: 20px;
+  height: 100%;
+  font-size: 18px;
+   margin-top: 15px;
+  padding-left: 2px;
+  padding-top: 10px;
   box-sizing: border-box;
 }
 
-.ticket {
-  background-color: rgb(252, 155, 8);
-  grid-area: ticket;
-}
-
-.contact {
-  background-color: aqua;
-}
-.payment {
-  background-color: chartreuse;
-}
 
 footer {
-  background-color: rgb(43, 195, 226);
+  height: 100px;
   text-align: center;
 }
 
@@ -121,9 +157,10 @@ input[type="checkbox"] {
 }
 
 /* height and width need to be same for radio*/
+
 input[type="radio"] {
-  height: 17px;
-  width: 17px;
+  height: 1fr;
+  width: 1fr;
 }
 
 #headcount {
